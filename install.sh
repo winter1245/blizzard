@@ -3,17 +3,22 @@ packages=('hyprland' 'hyprpaper' 'hyprpicker' 'hypridle' 'xdg-desktop-portal-hyp
           'waybar' 
           'imv' 'zathura' 'vlc' 'yt-dlp' 'neovim')
 
-read -p "make sure to create a backup of you configuration! continue? [y/n] " input
+read -p "make sure to create a backup of you configuration! install packages? [y/n] " input
 
-if [[ $input == "n" ]]; then
-  echo "1"
-  exit
+if [[ $input == "y" ]]; then
+  sudo pacman -Syu
+  for package in $packages; do 
+    sudo pacman -S $package
+  done
 fi
-echo "2"
+  
+read -p "Setup Bluetooth? [y/n] " input
 
-sudo pacman -Syu
-
-for package in $packages; do 
-  sudo pacman -S $package
-done
+if [[ $input == "y" ]]; then
+  sudo pacman -S bluez blueman bluez-utils
+  modprobe btusb
+  sudo systemctl enable bluetooth.service
+  sudo systemctl start bluetooth.service
+  echo "Bluetooth enabled"
+fi
 
