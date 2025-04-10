@@ -1,6 +1,6 @@
 
 packages=('hyprland' 'hyprpaper' 'hyprpicker' 'hypridle' 'xdg-desktop-portal-hyprland' 'hyprlock' 
-          'waybar' 'wofi' 'sddm' 'imagemagick'
+          'waybar' 'wofi' 'sddm' 'imagemagick' 'alacritty'
           'slurp' 'wl-clipboard'
           'unzip'
           'pipewire' 'pipewire-alsa' 'pipewire-pulse' 'mpv'
