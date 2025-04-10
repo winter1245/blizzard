@@ -6,7 +6,7 @@ packages=('hyprland' 'hyprpaper' 'hyprpicker' 'hypridle' 'xdg-desktop-portal-hyp
           'pipewire' 'pipewire-alsa' 'pipewire-pulse' 'mpv'
           'imv' 'zathura' 'glow'
           'vlc' 'yt-dlp'
-          'neovim'
+          'neovim' 'python-pynvim'
           'keypassxc'
           'ttf-jetbrains-mono-nerd'
           'thunar' 'htop' 'fzf')
